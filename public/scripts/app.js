@@ -1,5 +1,6 @@
 'use strict';
 
+// First solution
 var appRoot = document.getElementById('app');
 
 var show = {
@@ -36,4 +37,37 @@ var renderApp = function renderApp() {
     ReactDOM.render(template, appRoot);
 };
 
-renderApp();
+//renderApp();
+
+//Second better! solutions
+var visibility = false;
+
+var visibilityToggle = function visibilityToggle() {
+    visibility = !visibility;
+    renderApp2();
+};
+
+var renderApp2 = function renderApp2() {
+    var template = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Visibility Toggle'
+        ),
+        React.createElement(
+            'button',
+            { onClick: visibilityToggle },
+            visibility ? 'Hide details' : 'Show details'
+        ),
+        React.createElement(
+            'p',
+            null,
+            visibility && 'Hey! These are some details you can now see!'
+        )
+    );
+    ReactDOM.render(template, appRoot);
+};
+
+renderApp2();
