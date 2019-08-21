@@ -2,11 +2,27 @@
   "name": "indecision-app",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/mozieblo/react-course-projects.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozieblo/react-course-projects.git"
+  },
   "author": "mozieblo <m.ozieblo@wp.pl>",
   "license": "MIT",
   "dependencies": {
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1"
+  },
+  "bugs": {
+    "url": "https://github.com/mozieblo/react-course-projects/issues"
+  },
+  "homepage": "https://github.com/mozieblo/react-course-projects#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "live-server public",
+    "start": "npx babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+  },
+  "description": "",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
